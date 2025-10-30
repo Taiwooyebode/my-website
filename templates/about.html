@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="about-hero" style="background-image:url('{{ url_for('static', filename='assets/about-bg.jpg') }}')">
+  <div class="overlay"></div>
+  <div class="container py-6">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="glass about-card p-5">
+          <h2 class="fw-bold mb-3">About Me</h2>
+          <p class="lead mb-3">I'm Emmanuel — I build backend systems and analyze data to drive decisions. I enjoy clean code, small APIs that scale, and clear visuals.</p>
+
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <h6>What I do</h6>
+              <ul class="muted mb-0">
+                <li>Design & ship Flask APIs</li>
+                <li>Data cleaning & analysis with Pandas</li>
+                <li>Visualization & reporting with Matplotlib</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6>Now learning</h6>
+              <ul class="muted mb-0">
+                <li>Machine learning & model deployment</li>
+                <li>Performance tuning & observability</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a class="btn btn-outline-light" href="{{ url_for('contact') }}">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

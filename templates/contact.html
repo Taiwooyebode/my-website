@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="contact-hero" style="background-image:url('{{ url_for('static', filename='assets/contact-bg.jpg') }}')">
+  <div class="overlay"></div>
+  <div class="container py-6">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="glass p-4 p-md-5">
+          <h2 class="fw-bold mb-3">Contact</h2>
+          <p class="muted mb-4">Have a project or question? Send a message below.</p>
+        <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="{{ url_for('submitted') }}" method="post" novalidate>
+  <div class="mb-3">
+    <label for="name" class="form-label text-light">Your Name</label>
+    <input name="name" type="text" class="form-control" id="name" placeholder="Enter your name" required>
+    <div class="invalid-feedback">Please enter your name.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="phone" class="form-label text-light">Phone Number</label>
+    <input class="form-control" id="phone" name="number" type="tel" placeholder="Enter your phone number" required>
+    <div class="invalid-feedback">A phone number is required.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label text-light">Email</label>
+    <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com" required>
+    <div class="invalid-feedback">Please enter a valid email.</div>
+  </div>
+
+  <div class="mb-4">
+    <label for="message" class="form-label text-light">Message</label>
+    <textarea name="message" class="form-control" id="message" placeholder="Type your message" rows="5" required></textarea>
+    <div class="invalid-feedback">Message required.</div>
+  </div>
+
+  <div class="d-grid">
+    <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+  </div>
+</form>
+
+<!-- Success modal (Bootstrap) -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Message Sent</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Sent successfully.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+

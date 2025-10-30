@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- HERO -->
+<header class="hero" style="background-image:url('{{ url_for('static', filename='assets/home-bg.jpg') }}')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="display-5 fw-bold reveal">Hi — I'm Emmanuel</h1>
+        <p class="lead reveal delay">Python developer • backend & data • Flask · Pandas · Matplotlib</p>
+     <div class="mt-4 reveal always-visible delay-2 d-flex flex-column flex-sm-row gap-2">
+  <a class="btn btn-outline-light btn-lg rounded-pill px-4 fw-semibold border-2" href="{{ url_for('about') }}" role="button">About me</a>
+  <a class="btn btn-primary btn-lg rounded-pill px-4 fw-semibold shadow" href="{{ url_for('contact') }}" role="button">Contact</a>
+</div>
+
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <div class="profile-card reveal">
+          <img src="{{ url_for('static', filename='assets/profile.jpg') }}" alt="profile" class="profile-photo">
+          <div class="profile-info">
+            <h5 class="mb-0">Emmanuel</h5>
+            <small class="muted">Python · Backend · Data</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SKILLS -->
+<section class="container skills py-5">
+  <h2 class="section-title text-center mb-4">Skills</h2>
+  <p class="text-center muted mb-4">Focused on backend systems and data analysis — expanding into ML.</p>
+
+  <div class="row g-4">
+    <div class="col-6 col-md-3">
+      <div class="skill-card card-glass text-center p-4 h-100">
+        <img src="{{ url_for('static', filename='assets/flask.png') }}" class="skill-img mb-3" alt="Flask">
+        <h6 class="mb-1">Flask</h6>
+        <p class="muted small mb-0">Building secure, fast, and scalable web backends and APIs using Flask and modern Python tools.</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="skill-card card-glass text-center p-4 h-100">
+        <img src="{{ url_for('static', filename='assets/pandas.png') }}" class="skill-img mb-3" alt="Pandas">
+        <h6 class="mb-1">Data Analysis</h6>
+        <p class="muted small mb-0">Expert in data wrangling and transformation, turning raw data into structured, useful insights.</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="skill-card card-glass text-center p-4 h-100">
+        <img src="{{ url_for('static', filename='assets/matplotlib.png') }}" class="skill-img mb-3" alt="Matplotlib">
+        <h6 class="mb-1">Matplotlib</h6>
+        <p class="muted small mb-0">Creating clean, expressive visualizations for analytics dashboards and reports.</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="skill-card card-glass text-center p-4 h-100">
+        <img src="{{ url_for('static', filename='assets/ml.png') }}" class="skill-img mb-3" alt="ML">
+        <h6 class="mb-1">Machine Learning</h6>
+        <p class="muted small mb-0">Currently expanding into ML to integrate predictive intelligence into backend systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
