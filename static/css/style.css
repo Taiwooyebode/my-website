@@ -13,6 +13,7 @@ body.theme-dark{
   color: #e9eef5;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing:antialiased;
+  padding-top: 74px;
 }
 
 /* NAV */
